@@ -11,16 +11,18 @@ data = requests.get('https://iamshop-online.com/brands.html',headers=headers)
 soup = BeautifulSoup(data.text, 'html.parser')
 
 # select를 이용해서, tr들을 불러오기, 여기안에 50개가 들어가 있음(네이버 영화가 50개라고 하면), 적당히 중간에 있는 걸 찾아서, a(최종)를 이용해서 찾아보기
-brands = soup.select('#contents > div')
+brands = soup.select('#contents > div > div > div.brands-box > a')
 #contents > div > div > div.brands-box.brands-A > a:nth-child(1)
 #contents > div > div > div.brands-box.brands-D > a:nth-child(2)
 #contents > div > div > div.brands-box.brands-C > a:nth-child(1)
 
+
 # movies (tr들) 의 반복문을 돌리기
 for brand in brands:
+    print(brand.text, brand['href'])
     # movie 안에 a 가 있으면,
-    a_tag = brand.select_one('div')
-    if a_tag is not None:
-
-        print(a_tag.text)
+    # a_tag = brand.select_one('div a')
+    # if a_tag is not None:
+    #
+    #     print(a_tag.text, a_tag['href'])
 
