@@ -94,55 +94,28 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // index.html 로드가 완료되면 자동으로 showStar() 함수를 호출합니다.
-            showStar();
-        });
 
-        function click(brand) {
-            $.ajax({
-                type: 'POST',
-                url: '/api/click',
-                data: {},
-                success: function (response) {
-                    if (response['result'] == 'success') {
-                        let msg = response['msg'];
-                        alert(msg);
-                    }
-                }
-            });
-        }
-
-        function deleteStar(name) {
-            $.ajax({
-                type: 'POST',
-                url: '/api/delete',
-                data: {},
-                success: function (response) {
-                    if (response['result'] == 'success') {
-                        let msg = response['msg'];
-                        alert(msg);
-                    }
-                }
-            });
-        }
-
-        function showStar() {
+        function listing(brand) {
             $.ajax({
                 type: 'GET',
-                url: '/api/list',
-                data: {},
+                url: '/api/click',
+                data: {name_give:brand},
                 success: function (response) {
-                    if (response['result'] == 'success') {
-                        let msg = response['msg'];
-                        alert(msg);
+                        if (response['result'] == 'success') {
+                            let brand_db = response['brand_db']
+                            console.log(brand_db)
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
+
+
+
     </script>
 
 </head>
+
+
 <body>
 <h1>Brand</h1>
 <nav id="primary_nav_wrap">
@@ -150,7 +123,7 @@
         <li class="current-menu-item"><a href="#">Category</a></li>
         <li><a href="#">A</a>
             <ul>
-                <li><a href="#" onclick="click('AECAWHITE')">AECA WHITE</a></li>
+                <li><a href="#" onclick="listing('AECAWHITE')">AECA WHITE</a></li>
                 <li><a href="#">AIE</a></li>
                 <li><a href="#">ALL TIME ORIGINAL</a></li>
                 <li><a href="#">AND WANDER</a></li>

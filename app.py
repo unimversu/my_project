@@ -13,24 +13,19 @@ def home():
     return render_template('index.html')
 
 # API 역할을 하는 부분
-@app.route('/api/click', methods=['POST'])
+@app.route('/api/click', methods=['GET'])
 def click_brand():
-    # 1. 클라이언트가 전달한 name_give를 name_receive 변수에 넣습니다.
-    # 2. mystar 목록에서 find_one으로 name이 name_receive와 일치하는 star를 찾습니다.
-    # 3. star의 like 에 1을 더해준 new_like 변수를 만듭니다.
-    # 4. mystar 목록에서 name이 name_receive인 문서의 like 를 new_like로 변경합니다.
-    # 참고: '$set' 활용하기!
-    # 5. 성공하면 success 메시지를 반환합니다.
-    return jsonify({'result': 'success', 'msg': '연결되었습니다!'})
+    # 1. mongoDB에서 _id 값을 제외한 모든 데이터 조회해오기(Read)
+    #result = list(db.brand_db.find({}, {'_id': False})),
+    # 2. articles라는 키 값으로 articles 정보 보내주기
+
+    name_receive = request.form['name_give']
+    target_brand = db.brand_db.find.one(['brand : name_receive'])
+
+    return jsonify({'result': 'success', 'brand_db': target_brand})
 
 
 
-@app.route('/api/list', methods=['GET'])
-def show_stars():
-    # 1. db에서 mystar 목록 전체를 검색합니다. ID는 제외하고 like 가 많은 순으로 정렬합니다.
-    # 참고) find({},{'_id':False}), sort()를 활용하면 굿!
-    # 2. 성공하면 success 메시지와 함께 stars_list 목록을 클라이언트에 전달합니다.
-    return jsonify({'result': 'success', 'msg': 'list 연결되었습니다!'})
 
 
 
