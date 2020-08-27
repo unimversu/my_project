@@ -1,405 +1,201 @@
 <html>
 <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Webpage Title -->
+    <title>개발중</title>
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="…">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <script type="text/javascript"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+        #primary_nav_wrap {
+            margin-top: 15px
         }
 
-        /* Initial menu */
-        .menu {
-            background-color: #98e1eb;
-            /* IE9, iOS 3.2+ */
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMTJkYWY0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwM2M1ZGIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjIyMSIvPjxzdG9wIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjQwOCIvPjxzdG9wIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjU0NCIvPjxzdG9wIHN0b3AtY29sb3I9IiNjM2U2ZWQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjc5NTk5OTk5OTk5OTk5OTkiLz48c3RvcCBzdG9wLWNvbG9yPSIjYzNlNmVkIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=);
-            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, rgb(18, 218, 244)), color-stop(0.221, rgb(3, 197, 219)), color-stop(0.408, rgb(239, 239, 239)), color-stop(0.544, rgb(239, 239, 239)), color-stop(0.796, rgb(195, 230, 237)), color-stop(1, rgb(195, 230, 237)));
-            /* Android 2.3 */
-            background-image: -webkit-repeating-linear-gradient(top, rgb(18, 218, 244) 0%, rgb(3, 197, 219) 22.1%, rgb(239, 239, 239) 40.8%, rgb(239, 239, 239) 54.4%, rgb(195, 230, 237) 79.6%, rgb(195, 230, 237) 100%);
-            /* IE10+ */
-            background-image: repeating-linear-gradient(to bottom, rgb(18, 218, 244) 0%, rgb(3, 197, 219) 22.1%, rgb(239, 239, 239) 40.8%, rgb(239, 239, 239) 54.4%, rgb(195, 230, 237) 79.6%, rgb(195, 230, 237) 100%);
-            background-image: -ms-repeating-linear-gradient(top, rgb(18, 218, 244) 0%, rgb(3, 197, 219) 22.1%, rgb(239, 239, 239) 40.8%, rgb(239, 239, 239) 54.4%, rgb(195, 230, 237) 79.6%, rgb(195, 230, 237) 100%);
-            left: -285px; /* start off behind the scenes */
-            height: 100%;
-            position: fixed;
-            width: 285px;
-        }
-
-        .menu ul {
-            border-top: 1px solid #636366;
+        #primary_nav_wrap ul {
             list-style: none;
+            position: relative;
+            float: left;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
-        .menu li {
-            border-bottom: 1px solid #636366;
-            /*font-family: 'Open Sans', sans-serif;*/
-            line-height: 45px;
-            padding-bottom: 3px;
-            padding-left: 20px;
-            padding-top: 3px;
-        }
-
-        .menu li a {
-            color: RGBA(20, 73, 87, 1);
-            font-size: 18px;
-            letter-spacing: 15px;
-            text-shadow: -2px 2px 10px #558ABB;
-            text-transform: uppercase;
-        }
-
-        .menu li a:hover {
-            text-decoration: none;
-        }
-
-
-        .icon-close {
-            cursor: pointer;
-            background-color: RGBA(55, 73, 87, 0.5);
-            padding-left: 10px;
-            padding-top: 10px;
-        }
-
-        .icon-menu {
-            color: RGBA(55, 73, 87, 0.8);
-            cursor: pointer;
-            /*font-family: 'Open Sans', sans-serif;*/
-            font-size: 24px;
-            line-height: 24px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .icon-menu i {
-            margin-right: 5px;
-        }
-
-        body {
-            position: relative;
-            left: 0;
-            margin: 0;
-            overflow: hidden;
-            /*display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            min-height: 700px;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-align: start;
-                -ms-flex-align: start;
-                    align-items: flex-start;*/
-        }
-
-        .jumbotron {
-            background: #fff url() no-repeat center;
-            background-size: cover;
-            min-height: 100vh;
-            width: 100%;
-            padding: 1rem 1rem !important;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        form {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            position: absolute;
-            top: 50px;
-            width: 100%;
-            padding-top: 50px;
-        }
-
-        fieldset {
-            position: relative;
-        }
-
-        .fa-search {
-            position: relative;
-            top: 0px;
-            font-size: 20px !important;
-        }
-
-        .url {
-            margin: 20px 50px;
-            padding-left: 50px;
-            -webkit-box-flex: 5;
-            -ms-flex-positive: 5;
-            flex-grow: 5;
-        }
-
-        .enter {
-            margin: 20px 20px;
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        label {
-            position: absolute;
-            top: -5px;
-            letter-spacing: 10px;
-            font-size: 20px;
-            color: RGBA(55, 73, 87, 0.8);
-            -webkit-transform-origin: left;
-            -ms-transform-origin: left;
-            transform-origin: left;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        input:focus ~ label {
-            color: RGBA(254, 253, 255, 1.00);
-        }
-
-        input:focus ~ label,
-        input:valid ~ label {
-            top: 0;
-            letter-spacing: 5px;
-            -webkit-transform: translate(0, -30px) scale(0.7, 0.7);
-            -ms-transform: translate(0, -30px) scale(0.7, 0.7);
-            transform: translate(0, -30px) scale(0.7, 0.7);
-
-        }
-
-        input {
-            font-family: system-ui, Helvetica, Arial, sans-serif;
-            font-size: 20px !important;
-            width: 100%;
-            border: none;
-            margin-top: 0;
-            background-color: transparent;
-        }
-
-        input:focus {
-            outline: none;
-        }
-
-        .after {
-            width: 100%;
-            height: 2px;
-            background: -webkit-gradient(linear, left top, right top, color-stop(50%, RGBA(254, 253, 255, 1.00)), color-stop(50%, transparent));
-            background: -webkit-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
-            background: -o-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
-            background: linear-gradient(to right, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
-            background-color: RGBA(55, 73, 87, 0.8);
-            background-size: 200% 100%;
-            background-position: 100% 0;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        input:focus ~ .after {
-            background-position: 0 0;
-        }
-
-        button {
-            position: relative;
-            width: 200px;
-            height: 34px;
-            font-size: 20px;
-            font-family: system-ui, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
-            margin-top: 20px;
-            padding: 2px 10px;
-            color: rgba(255, 255, 255, 0.6);
-            background: white;
-            border: none;
-            border-radius: 15px;
-            background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, transparent));
-            background: -webkit-linear-gradient(left, white 50%, transparent 50%);
-            background: -o-linear-gradient(left, white 50%, transparent 50%);
-            background: linear-gradient(to right, white 50%, transparent 50%);
-            background-color: RGBA(55, 73, 87, 0.8);
-            background-size: 200% 100%;
-            background-position: 100% 0;
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        button:before {
-            position: absolute;
-            font-family: system-ui, FontAwesome, Helvetica, Arial, sans-serif;;
-            font-size: 20px;
-            content: "\f00c";
-            letter-spacing: 3px;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            top: 2px;
-            bottom: 2px;
-            left: 2px;
-            right: 2px;
+        #primary_nav_wrap ul a {
             display: block;
-            border-radius: 15px;
-            /*color: white;*/
-            background-color: rgba(0, 0, 0, 0.3);
+            color: #333;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 32px;
+            padding: 0 15px;
+            font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
         }
 
-        button:active,
-        button:focus,
-        button:hover {
-            outline: none;
-            background-position: 0 0;
-            color: white;
+        #primary_nav_wrap ul li {
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0
         }
 
-        @media (min-width: 1260px) {
-            .body {
-                background-size: 100%;
-            }
+        #primary_nav_wrap ul li.current-menu-item {
+            background: #ddd
         }
 
-        @media (max-width: 590px) {
-            button {
-                width: 150px;
-                margin-left: -20px !important;
-            }
-
-            label {
-                letter-spacing: 7px;
-            }
+        #primary_nav_wrap ul li:hover {
+            background: #f6f6f6
         }
 
-        @media (max-width: 475px) {
-            form {
-                -webkit-box-orient: vertical !important;
-                -webkit-box-direction: normal !important;
-                -ms-flex-direction: column !important;
-                flex-direction: column !important;
-            }
-
-            button {
-                float: right;
-                margin-right: 25px !important;
-            }
+        #primary_nav_wrap ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            padding: 0
         }
 
-        @media (max-width: 315px) {
-            label {
-                letter-spacing: 5px;
-            }
+        #primary_nav_wrap ul ul li {
+            float: none;
+            width: 200px
         }
 
-        @media (max-width: 300px) {
-            label {
-                font-size: 10px;
-                letter-spacing: 3px;
-            }
+        #primary_nav_wrap ul ul a {
+            line-height: 120%;
+            padding: 10px 15px
         }
 
+        #primary_nav_wrap ul ul ul {
+            top: 0;
+            left: 100%
+        }
 
+        #primary_nav_wrap ul li:hover > ul {
+            display: block
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        var main = function () {
-            /* Push the body and the nav over by 285px over */
-            var isOpened = false;
+        $(document).ready(function () {
+            // index.html 로드가 완료되면 자동으로 showStar() 함수를 호출합니다.
+            showStar();
+        });
 
-            $('.menu').on("mouseover", function () {
-                clearInterval(walk_through);
-            });
-
-            $('.icon-menu').on("mouseover", function () {
-                clearInterval(walk_through);
-            });
-            $('.icon-menu').click(function () {
-                isOpened = true;
-
-                $('.menu').animate({
-                    left: "0px"
-                }, 200);
-
-                $('body').animate({
-                    left: "285px"
-                }, 200);
-            });
-
-            /* Then push them back */
-            $('.icon-close').on("mouseover", function () {
-                clearInterval(walk_through);
-            });
-            $('.icon-close').click(function () {
-                isOpened = false;
-
-                $('.menu').animate({
-                    left: "-285px"
-                }, 200);
-
-                $('body').animate({
-                    left: "0px"
-                }, 200);
-            });
-
-            // Walkthrough the menu
-            var walk_through = setInterval(function () {
-                if (!isOpened) {
-                    $('.icon-menu').trigger('click');
-                } else if (isOpened) {
-                    $('.icon-close').trigger('click');
+        function click(brand) {
+            $.ajax({
+                type: 'POST',
+                url: '/api/click',
+                data: {},
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        let msg = response['msg'];
+                        alert(msg);
+                    }
                 }
-            }, 3000);
-        };
+            });
+        }
 
-        $(document).ready(main);
+        function deleteStar(name) {
+            $.ajax({
+                type: 'POST',
+                url: '/api/delete',
+                data: {},
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        let msg = response['msg'];
+                        alert(msg);
+                    }
+                }
+            });
+        }
 
+        function showStar() {
+            $.ajax({
+                type: 'GET',
+                url: '/api/list',
+                data: {},
+                success: function (response) {
+                    if (response['result'] == 'success') {
+                        let msg = response['msg'];
+                        alert(msg);
+                    }
+                }
+            });
+        }
     </script>
 
 </head>
 <body>
-<div class="menu">
-    <!-- Menu icon -->
-    <div class="icon-close">
-        <img src="https://imgur.com/download/GcHTJg2">
-    </div>
-
-    <!-- Menu -->
+<h1>Brand</h1>
+<nav id="primary_nav_wrap">
     <ul>
-        <li><a href="#">nike</a></li>
-        <li><a href="#">adidas</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</div>
+        <li class="current-menu-item"><a href="#">Category</a></li>
+        <li><a href="#">A</a>
+            <ul>
+                <li><a href="#" onclick="click('AECAWHITE')">AECA WHITE</a></li>
+                <li><a href="#">AIE</a></li>
+                <li><a href="#">ALL TIME ORIGINAL</a></li>
+                <li><a href="#">AND WANDER</a></li>
+                <li><a href="#">ANDERSEN-ANDERSEN</a></li>
+                <li><a href="#">ANONYMOUSISM</a></li>
+                <li><a href="#">ARMORLUX</a></li>
+                <li><a href="#">ARPENTEUR</a></li>
+                <li><a href="#">ATELIER KHJ</a></li>
+                <li><a href="#">ALDEN</a></li>
+                <li><a href="#">Amiacalva</a></li>
+                <li><a href="#">Ancient greek sandals</a></li>
+                <li><a href="#">Arc'teryx</a></li>
+                <li><a href="#">Asics</a></li>
+                <li><a href="#">Auralee</a></li>
+                <li><a href="#">예비</a>
+                    <ul>
+                        <li><a href="#">Deep Menu 1</a>
+                            <ul>
+                                <li><a href="#">Sub Deep 1</a></li>
+                                <li><a href="#">Sub Deep 2</a></li>
+                                <li><a href="#">Sub Deep 3</a></li>
+                                <li><a href="#">Sub Deep 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Deep Menu 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">B</a>
+            <ul>
+                <li><a href="#">BARACUTA</a></li>
+                <li><a href="#">BARNS OUTFITTERS</a></li>
+                <li><a href="#">BATTENWEAR</a></li>
+                <li><a href="#">BIG UNION</a></li>
+                <li><a href="#">BIGWAVE</a></li>
+                <li><a href="#">BIRKENSTOCK</a></li>
+                <li><a href="#">BIRTHDAYSUIT</a></li>
+                <li><a href="#">BRIXTON</a></li>
+                <li><a href="#">BUTTON WORKS</a></li>
+                <li><a href="#">Balansa</a></li>
+                <li><a href="#">Baracuta</a></li>
+                <li><a href="#">Sub Menu 3</a></li>
 
-<!-- Main body -->
-<div class="jumbotron">
-
-    <div class="icon-menu">
-        <i class="fa fa-bars"></i>
-    </div>
-</div>
-
-<form action="#" autocomplete="off">
-    <fieldset class="url">
-        <input id="url" type="text" name="url" required>
-        <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Search</label>
-        <div class="after"></div>
-    </fieldset>
-    <fieldset class="enter">
-        <button></button>
-    </fieldset>
-</form>
+            </ul>
+</nav>
 </body>
 </html>
