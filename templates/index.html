@@ -98,12 +98,12 @@
         function listing(brand) {
             $.ajax({
                 type: 'GET',
-                url: '/api/click',
-                data: {name_give:brand},
+                // get 방식은 아래와 같이 변수를 전달합니다.
+                url: '/api/click?brand_give='+brand,
                 success: function (response) {
                         if (response['result'] == 'success') {
-                            let brand_db = response['brand_db']
-                            console.log(brand_db)
+                            let brand_db = response['brand_db'] //프로젝트에서 보낸 db에 응답하는 것 (여기는 바꾸지 말고) (db를 바궈야 겠다)
+                            console.log(brand_db) //브랜드 db를 찍어라
                         }
                     }
                 });
@@ -123,22 +123,22 @@
         <li class="current-menu-item"><a href="#">Category</a></li>
         <li><a href="#">A</a>
             <ul>
-                <li><a href="#" onclick="listing('AECAWHITE')">AECA WHITE</a></li>
-                <li><a href="#">AIE</a></li>
-                <li><a href="#">ALL TIME ORIGINAL</a></li>
-                <li><a href="#">AND WANDER</a></li>
-                <li><a href="#">ANDERSEN-ANDERSEN</a></li>
-                <li><a href="#">ANONYMOUSISM</a></li>
-                <li><a href="#">ARMORLUX</a></li>
-                <li><a href="#">ARPENTEUR</a></li>
-                <li><a href="#">ATELIER KHJ</a></li>
-                <li><a href="#">ALDEN</a></li>
-                <li><a href="#">Amiacalva</a></li>
-                <li><a href="#">Ancient greek sandals</a></li>
-                <li><a href="#">Arc'teryx</a></li>
-                <li><a href="#">Asics</a></li>
-                <li><a href="#">Auralee</a></li>
-                <li><a href="#">예비</a>
+                <li><a href="#" onclick="listing('AECA WHITE')">AECA WHITE</a></li>
+                <li><a href="#" onclick="listing('AIE')">AIE</a></li>
+                <li><a href="#" onclick="listing('ALL TIME ORIGINAL')">ALL TIME ORIGINAL</a></li>
+                <li><a href="#" onclick="listing('AND WANDER')">AND WANDER</a></li>
+                <li><a href="#" onclick="listing('ANDERSEN-ANDERSEN')">ANDERSEN-ANDERSEN</a></li>
+                <li><a href="#" onclick="listing('ANONYMOUSISM')">ANONYMOUSISM</a></li>
+                <li><a href="#" onclick="listing('ARMORLUX')">ARMORLUX</a></li>
+                <li><a href="#" onclick="listing('ARPENTEUR')">ARPENTEUR</a></li>
+                <li><a href="#" onclick="listing('ATELIER KHJ')">ATELIER KHJ</a></li>
+                <li><a href="#" onclick="listing('ALDEN')">ALDEN</a></li>
+                <li><a href="#" onclick="listing('AMIACALVA')">AMIACALVA</a></li>
+                <li><a href="#" onclick="listing('ANCIENT GREEK SANDALS')">ANCIENT GREEK SANDALS</a></li>
+                <li><a href="#" onclick="listing('ARC\'TERYX')">ARC'TERYX</a></li>
+                <li><a href="#" onclick="listing('ASICS')">ASICS</a></li>
+                <li><a href="#" onclick="listing('AURALEE')">AURALEE</a></li>
+                <li><a href="#" onclick="listing('')"></a></li>
                     <ul>
                         <li><a href="#">Deep Menu 1</a>
                             <ul>
@@ -155,20 +155,211 @@
         </li>
         <li><a href="#">B</a>
             <ul>
-                <li><a href="#">BARACUTA</a></li>
-                <li><a href="#">BARNS OUTFITTERS</a></li>
-                <li><a href="#">BATTENWEAR</a></li>
-                <li><a href="#">BIG UNION</a></li>
-                <li><a href="#">BIGWAVE</a></li>
-                <li><a href="#">BIRKENSTOCK</a></li>
-                <li><a href="#">BIRTHDAYSUIT</a></li>
-                <li><a href="#">BRIXTON</a></li>
-                <li><a href="#">BUTTON WORKS</a></li>
-                <li><a href="#">Balansa</a></li>
-                <li><a href="#">Baracuta</a></li>
-                <li><a href="#">Sub Menu 3</a></li>
+                <li><a href="#" onclick="listing('BARACUTA')">BARACUTA</a></li>
+                <li><a href="#" onclick="listing('BARNS OUTFITTERS')">BARNS OUTFITTERS</a></li>
+                <li><a href="#" onclick="listing('BATTENWEAR')">BATTENWEAR</a></li>
+                <li><a href="#" onclick="listing('BIG UNION')">BIG UNION</a></li>
+                <li><a href="#" onclick="listing('BIGWAVE')">BIGWAVE</a></li>
+                <li><a href="#" onclick="listing('BIRKENSTOCK')">BIRKENSTOCK</a></li>
+                <li><a href="#" onclick="listing('BIRTHDAYSUIT')">BIRTHDAYSUIT</a></li>
+                <li><a href="#" onclick="listing('BRIXTON')">BRIXTON</a></li>
+                <li><a href="#" onclick="listing('BUTTON WORKS')">BUTTON WORKS</a></li>
+                <li><a href="#" onclick="listing('BALANSA')">BALANSA</a></li>
+                <li><a href="#" onclick="listing('BATONER')">BATONER</a></li>
+                <li><a href="#" onclick="listing('BAUHAUS-ARCHIV')">BAUHAUS-ARCHIV</a></li>
+                <li><a href="#" onclick="listing('BED J.W. FORD')">BED J.W. FORD</a></li>
+                <li><a href="#" onclick="listing('BODY/HEAD')">BODY/HEAD</a></li>
+                <li><a href="#" onclick="listing('BROWNYARD')">BROWNYARD</a></li>
+                <li><a href="#" onclick="listing('BULLETTO')">BULLETTO</a></li>
+                <li><a href="#" onclick="listing('BY H')">BY H</a></li>
+
 
             </ul>
+
+        <li><a href="#">C</a>
+            <ul>
+            <li><a href="#" onclick="listing('CAL O LINE')">CAL O LINE</a></li>
+            <li><a href="#" onclick="listing('CAMIEL FORTGENS')">CAMIEL FORTGENS</a></li>
+            <li><a href="#" onclick="listing('CHAMPION')">CHAMPION</a></li>
+            <li><a href="#" onclick="listing('CHAMULA')">CHAMULA</a></li>
+            <li><a href="#" onclick="listing('CLAMP')">CLAMP</a></li>
+            <li><a href="#" onclick="listing('CLARKS')">CLARKS</a></li>
+            <li><a href="#" onclick="listing('CLASS')">CLASS</a></li>
+            <li><a href="#" onclick="listing('COMFY OUTDOOR GARMENT')">COMFY OUTDOOR GARMENT</a></li>
+            <li><a href="#" onclick="listing('CORONA UTILITY')">CORONA UTILITY</a></li>
+            <li><a href="#" onclick="listing('COST PER KILO')">COST PER KILO</a></li>
+            <li><a href="#" onclick="listing('COWORKERS')">COWORKERS</a></li>
+            <li><a href="#" onclick="listing('CURLY')">CURLY</a></li>
+            </ul>
+
+        <li><a href="#">D</a>
+            <ul>
+            <li><a href="#" onclick="listing('DANIEL JOHNSTON')">DANIEL JOHNSTON</a></li>
+            <li><a href="#" onclick="listing('DASHWOOD BOOKS')">DASHWOOD BOOKS</a></li>
+            <li><a href="#" onclick="listing('DE BONNE FACTURE')">DE BONNE FACTURE</a></li>
+            <li><a href="#" onclick="listing('DECHO')">DECHO</a></li>
+            <li><a href="#" onclick="listing('DEUS EX MACHINA')">DEUS EX MACHINA</a></li>
+            <li><a href="#" onclick="listing('DOCUMENT')">DOCUMENT</a></li>
+            <li><a href="#" onclick="listing('DR.MARTENS')">DR.MARTENS</a></li>
+
+            </ul>
+
+        <li><a href="#">E</a>
+            <ul>
+            <li><a href="#" onclick="listing('E. TAUTZ')">E. TAUTZ</a></li>
+            <li><a href="#" onclick="listing('EAST HARBOUR SURPLUS')">EAST HARBOUR SURPLUS</a></li>
+            <li><a href="#" onclick="listing('EASTLOGUE')">EASTLOGUE</a></li>
+            <li><a href="#" onclick="listing('EEL')">EEL</a></li>
+            <li><a href="#" onclick="listing('EFFECTOR')">EFFECTOR</a></li>
+            <li><a href="#" onclick="listing('ELSEWEAR')">ELSEWEAR</a></li>
+            <li><a href="#" onclick="listing('ENGINEERED GARMENTS')">ENGINEERED GARMENTS</a></li>
+            <li><a href="#" onclick="listing('EPPERSON MOUNTAINEERING')">EPPERSON MOUNTAINEERING</a></li>
+            <li><a href="#" onclick="listing('ERNEST W. BAKER')">ERNEST W. BAKER</a></li>
+            <li><a href="#" onclick="listing('EXPERIMENT.B')">EXPERIMENT.B</a></li>
+
+
+
+            </ul>
+
+        <li><a href="#">F</a>
+            <ul>
+            <li><a href="#" onclick="listing('F/CE')">F/CE</a></li>
+            <li><a href="#" onclick="listing('FFIXXED STUDIOS')">FFIXXED STUDIOS</a></li>
+            <li><a href="#" onclick="listing('FRED PERRY')">FRED PERRY</a></li>
+            <li><a href="#" onclick="listing('FULLCOUNT')">FULLCOUNT</a></li>
+            </ul>
+
+        <li><a href="#">G</a>
+            <ul>
+            <li><a href="#" onclick="listing('GEORGE COX')">GEORGE COX</a></li>
+            <li><a href="#" onclick="listing('GO OUT')">GO OUT</a></li>
+            <li><a href="#" onclick="listing('GOLDEN BEAR SPORTS')">GOLDEN BEAR SPORTS</a></li>
+            <li><a href="#" onclick="listing('GR10K')">GR10K</a></li>
+            <li><a href="#" onclick="listing('GRAMICCI')">GRAMICCI</a></li>
+            <li><a href="#" onclick="listing('GRANTED CLOTHING')">GRANTED CLOTHING</a></li>
+            <li><a href="#" onclick="listing('GUIDI')">GUIDI</a></li>
+
+            </ul>
+
+        <li><a href="#">H</a>
+            <ul>
+            <li><a href="#" onclick="listing('HARMAN OPTICAL CO.')">HARMAN OPTICAL CO.</a></li>
+            <li><a href="#" onclick="listing('HARRIS WHARF LONDON')">HARRIS WHARF LONDON</a></li>
+            <li><a href="#" onclick="listing('HATSKI')">HATSKI</a></li>
+            <li><a href="#" onclick="listing('HED MAYNER')">HED MAYNER</a></li>
+            <li><a href="#" onclick="listing('HELINOX')">HELINOX</a></li>
+            <li><a href="#" onclick="listing('HENDER SCHEME')">HENDER SCHEME</a></li>
+            <li><a href="#" onclick="listing('HEREU')">HEREU</a></li>
+            <li><a href="#" onclick="listing('HERITAGE FLOSS')">HERITAGE FLOSS</a></li>
+            <li><a href="#" onclick="listing('HEROES OF HISTORY')">HEROES OF HISTORY</a></li>
+            <li><a href="#" onclick="listing('HEXICO')">HEXICO</a></li>
+            <li><a href="#" onclick="listing('HOKA ONE ONE')">HOKA ONE ONE</a></li>
+            <li><a href="#" onclick="listing('HOWLIN')">HOWLIN</a></li>
+            </ul>
+
+        <li><a href="#">I</a>
+            <ul>
+            <li><a href="#" onclick="listing('INFIELDER DESIGN')">INFIELDER DESIGN</a></li>
+            <li><a href="#" onclick="listing('ISABEL BENENATO')">ISABEL BENENATO</a></li>
+            <li><a href="#" onclick="listing('ISLAND SLIPPER')">ISLAND SLIPPER</a></li>
+            <li><a href="#" onclick="listing('IYSO')">IYSO</a></li>
+            </ul>
+
+        <li><a href="#">J</a>
+            <ul>
+            <li><a href="#" onclick="listing('J. JS LEE')">J. JS LEE</a></li>
+            <li><a href="#" onclick="listing('JIEDA')">JIEDA</a></li>
+            <li><a href="#" onclick="listing('JOHN MOORE')">JOHN MOORE</a></li>
+            <li><a href="#" onclick="listing('JOURNEYMAN')">JOURNEYMAN</a></li>
+            </ul>
+
+        <li><a href="#">K</a>
+            <ul>
+            <li><a href="#" onclick="listing('KAPTAIN SUNSHINE')">KAPTAIN SUNSHINE</a></li>
+            <li><a href="#" onclick="listing('KEEN')">KEEN</a></li>
+            <li><a href="#" onclick="listing('KENNETH FIELD')">KENNETH FIELD</a></li>
+            <li><a href="#" onclick="listing('KIM CLOTHING')">KIM CLOTHING</a></li>
+            <li><a href="#" onclick="listing('KLEMAN')">KLEMAN</a></li>
+            <li><a href="#" onclick="listing('KOLOR / BEACON')">KOLOR / BEACON</a></li>
+            <li><a href="#" onclick="listing('KOMPAKT RECORD BAR')">KOMPAKT RECORD BAR</a></li>
+            </ul>
+
+        <li><a href="#">L</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">M</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">N</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">O</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">P</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">Q</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">R</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">S</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">T</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">U</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">V</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">W</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">X</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">Y</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+        <li><a href="#">Z</a>
+            <ul>
+            <li><a href="#" onclick="listing('')"></a></li>
+            </ul>
+
+
 </nav>
 </body>
 </html>

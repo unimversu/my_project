@@ -1,6 +1,7 @@
-from pymongo import MongoClient
-
 from flask import Flask, render_template, jsonify, request
+import requests
+from bs4 import BeautifulSoup
+from pymongo import MongoClient
 
 app = Flask(__name__)
 
@@ -15,14 +16,33 @@ def home():
 # API 역할을 하는 부분
 @app.route('/api/click', methods=['GET'])
 def click_brand():
-    # 1. mongoDB에서 _id 값을 제외한 모든 데이터 조회해오기(Read)
-    #result = list(db.brand_db.find({}, {'_id': False})),
-    # 2. articles라는 키 값으로 articles 정보 보내주기
+    brand_receive = request.args.get('brand_give')
+    url = db.brand_db.find_one({'brand': brand_receive}, {'_id': False, 'site': False})['url'],
 
-    name_receive = request.form['name_give']
-    target_brand = db.brand_db.find.one(['brand : name_receive'])
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+    data = requests.get(url)
 
-    return jsonify({'result': 'success', 'brand_db': target_brand})
+    soup = BeautifulSoup(data.text, 'html.parser')
+    og_title = soup.select_one('meta[property="og:title"]')
+    og_description = soup.select_one('meta[property="og:description"]')
+    og_image = soup.select_one('meta[property="og:image"]')
+
+    doc = {
+        'url': url,
+        'title': og_title['content'],
+        'desc': og_description['content'],
+        'image': og_image['content']
+    }
+
+
+    return jsonify({'result': 'success', 'brand_db': doc})
+
+
+    #name_receive = request.form['AECAWHITE']
+    #target_brand = db.brand_db.find(['brand : AECA WHITE'])
+
+    #return jsonify({'result': 'success', 'brand_db': target_brand})
 
 
 
